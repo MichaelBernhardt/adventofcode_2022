@@ -11,6 +11,8 @@ for (let i = 0; i < array.length; i++) {
         elves[j] = 0;
     } else {
         elves[j] = parseInt(elves[j]) + parseInt(array[i])
-    }
+    } 
 }
-console.log(Math.max(...elves))
+elves.sort(function(a, b){return b - a});
+
+console.log(elves[0] + elves[1] + elves[2]);
