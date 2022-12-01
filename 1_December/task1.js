@@ -10,13 +10,13 @@ for (let i = 0; i < array.length; i++) {
     
     if (array[i] === ""){
         j++;
+        elves[j] = 0;
     } else {
-        elves[j] = 0 + array[i]
-        elves[j] = parseInt(elves[j]) + parseInt(elves[j])
+        //elves[j] = array[i]
+        console.log("number: " + elves[j])
+        elves[j] = parseInt(elves[j]) + parseInt(array[i])
     }
-    
-    elves.sort(function(a, b){return b - a});
+   
     
 }
-
-console.log(elves[0])
+console.log(Math.max(...elves))
