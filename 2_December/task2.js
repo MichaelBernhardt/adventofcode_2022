@@ -46,15 +46,15 @@ for (let i = 0; i < array.length; i++) {
 
     // DRAW
      if ((opponentPlay === "A" && myPlay === "ROCK") || (opponentPlay === "B" && myPlay === "PAPER") || (opponentPlay === "C" && myPlay === "SISSORS")) {
-         pointsForMatch = pointsForMatch + 3 
+         pointsForMatch += 3 
      }
 
      // WIN
      if ((opponentPlay === "A" && myPlay === "PAPER") || (opponentPlay === "B" && myPlay === "SISSORS")  || (opponentPlay === "C" && myPlay === "ROCK") ){
-         pointsForMatch = pointsForMatch + 6 
+         pointsForMatch += 6 
      }
 
-    totalPoints = totalPoints + pointsForMatch;
+    totalPoints += pointsForMatch;
 }
 
 console.log("TotalPoints: " + totalPoints);
