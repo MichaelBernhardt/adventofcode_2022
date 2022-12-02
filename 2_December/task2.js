@@ -39,19 +39,16 @@ for (let i = 0; i < array.length; i++) {
     if (myPlay === "ROCK") pointsForMatch = 1 // Rock
     if (myPlay === "PAPER") pointsForMatch = 2 // Paper
     if (myPlay === "SISSORS") pointsForMatch = 3 // Sissors 
-
-    // 0 loss
-    // 3 draw
-    // 6 won
-
+    
     // DRAW
      if ((opponentPlay === "A" && myPlay === "ROCK") || (opponentPlay === "B" && myPlay === "PAPER") || (opponentPlay === "C" && myPlay === "SISSORS")) {
-         pointsForMatch += 3 
+         pointsForMatch += 3 // 3 draw
      }
 
      // WIN
      if ((opponentPlay === "A" && myPlay === "PAPER") || (opponentPlay === "B" && myPlay === "SISSORS")  || (opponentPlay === "C" && myPlay === "ROCK") ){
-         pointsForMatch += 6 
+         pointsForMatch += 6 // 6 won
+
      }
 
     totalPoints += pointsForMatch;
