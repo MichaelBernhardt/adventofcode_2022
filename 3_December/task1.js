@@ -12,15 +12,19 @@ for (let i = 0; i < array.length; i++) {
 
     let compartment1 = array[i].slice(0, compartmentSize)
     let compartment2 = array[i].slice(compartmentSize)
+    let notFound = true
 
     for (let i = 0; i < compartment1.length; i++) {
-        for (let j = 0; j < compartment2.length; j++) { 
-            if (compartment1[i] == compartment2[j]) {
-                let priorityPoints = priorityString.indexOf(compartment1[i]) + 1
-                priorityTotal += priorityPoints
+            for (let j = 0; j < compartment2.length; j++) { 
+                if (compartment1[i] == compartment2[j]) {
+               // 
+                    //console.log(compartment1[i])
+                    let priorityPoints = priorityString.indexOf(compartment1[i]) + 1
+                    priorityTotal += priorityPoints
+                }
             }
-        }
     }
 }
+    
 
 console.log(priorityTotal/2)
